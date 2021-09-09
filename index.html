@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link rel="icon" href="./img/logo.png" type="image/x-icon">
+    <title>Jujutsu Kaisen</title>
+</head>
+<body>
+    <div class="product-card">
+        <h1>Jujutsu Kaisen</h1>
+        <p>Bộ phim về những thuật sư săn lùng ngón tay...</p>
+        <div class="product-pic"></div>
+            <div class="product-colors">
+                <span class="red active" data-color="#ff7979" data-pic="url(./img/1.png)"></span>
+                <span class="blue" data-color="#686de0" data-pic="url(./img/2.png)"></span>
+                <span class="yellow" data-color="#ffbe76" data-pic="url(./img/3.png)"></span>
+                <span class="gray" data-color="#535c68" data-pic="url(./img/4.png)"></span>
+            </div>
+            <div class="product-info">
+                <div class="product-price">$100</div>
+                <a href="#" class="product-button">Thêm vào giỏ hàng</a>
+            </div>
+    </div>
+
+    <script>
+        $(".product-colors span").click(function(){
+            $(".product-colors span").removeClass("active");
+            $(this).addClass("active");
+            $("body").css("background",$(this).attr("data-color"));
+            $(".product-price").css("color",$(this).attr("data-color"));
+            $(".product-button").css("color",$(this).attr("data-color"));
+            $(".product-pic").css("background-image",$(this).attr("data-pic"));
+        });
+    </script>
+    <iframe src="https://www.nhaccuatui.com/mh/auto/lVoMVXR6LkJs" hidden allow="autoplay"></iframe>
+</body>
+</html>
